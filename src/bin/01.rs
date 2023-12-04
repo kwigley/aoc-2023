@@ -29,10 +29,7 @@ pub fn part_two(input: &str) -> Option<u32> {
                 .clone()
                 .fold_while("".to_owned(), |acc, c| {
                     if let Some(n) = NUMBERS.iter().position(|n| acc.as_str().contains(n)) {
-                        Done(
-                            (n + 1)
-                                .to_string(),
-                        )
+                        Done((n + 1).to_string())
                     } else if c.is_numeric() {
                         Done(c.to_string())
                     } else {
@@ -45,10 +42,7 @@ pub fn part_two(input: &str) -> Option<u32> {
                 .rev()
                 .fold_while("".to_owned(), |acc, c| {
                     if let Some(n) = NUMBERS.iter().position(|n| acc.as_str().contains(n)) {
-                        Done(
-                            (n + 1)
-                                .to_string(),
-                        )
+                        Done((n + 1).to_string())
                     } else if c.is_numeric() {
                         Done(c.to_string())
                     } else {
